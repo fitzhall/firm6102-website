@@ -5,81 +5,306 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Firm6102 - Bitcoin Estate Planning Experts</title>
     <meta name="description" content="Contact Firm6102 for Bitcoin estate planning consultation. Schedule a strategic consultation with our KEEP Protocol certified experts.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-navy': '#1a2332',
+                        'bitcoin-gold': '#f7931a',
+                        'charcoal': '#2c3e50',
+                        'light-gray': '#f8f9fa',
+                        'accent-silver': '#95a5a6'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
+        }
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .contact-gradient {
+            background: linear-gradient(135deg, #f7931a 0%, #f39c12 100%);
+        }
+    </style>
 </head>
-<body>
-    <nav class="navigation">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="/">FIRM<span class="gold">6102</span></a>
+<body class="font-sans text-charcoal">
+    <!-- Navigation (Same as homepage) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-deep-navy">
+                        FIRM<span class="text-bitcoin-gold">6102</span>
+                    </a>
                 </div>
-                <div class="nav-menu">
-                    <a href="/about" class="nav-link">About</a>
-                    <a href="/bitcoin-sovereignty/" class="nav-link">Bitcoin Sovereignty</a>
-                    <a href="/services/" class="nav-link">Services</a>
-                    <a href="/states/" class="nav-link">State Guides</a>
-                    <a href="/resources/" class="nav-link">Resources</a>
-                    <a href="/contact" class="nav-link active">Contact</a>
-                    <a href="/consultation" class="btn btn-primary">Schedule Consultation</a>
-                </div>
-                <div class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/about" class="text-gray-700 hover:text-bitcoin-gold transition-colors">About</a>
+                    <a href="/bitcoin-sovereignty/" class="text-gray-700 hover:text-bitcoin-gold transition-colors">Bitcoin Sovereignty</a>
+                    <a href="/services/" class="text-gray-700 hover:text-bitcoin-gold transition-colors">Services</a>
+                    <a href="/states/" class="text-gray-700 hover:text-bitcoin-gold transition-colors">State Guides</a>
+                    <a href="/resources/" class="text-gray-700 hover:text-bitcoin-gold transition-colors">Resources</a>
+                    <a href="/contact" class="text-gray-700 hover:text-bitcoin-gold transition-colors">Contact</a>
+                    <a href="/consultation" class="ml-4 px-6 py-2 bg-bitcoin-gold text-white rounded-lg hover:bg-orange-600 transition-colors">
+                        Schedule Consultation
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-content">
-                <h1>Contact Firm6102</h1>
-                <p class="lead">Begin your journey to Bitcoin sovereignty and generational wealth preservation</p>
-            </div>
+    <!-- Page Hero -->
+    <section class="hero-gradient pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-display font-bold text-white mb-4">Contact Firm6102</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Begin your journey to Bitcoin sovereignty and generational wealth preservation
+            </p>
         </div>
     </section>
 
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-content">
-                <h2>Schedule a Strategic Consultation</h2>
-                <p>Our team of Bitcoin estate planning experts is ready to help you develop a comprehensive sovereignty strategy tailored to your family's unique needs.</p>
+    <!-- Contact Options -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-bold text-deep-navy mb-4">Choose Your Path</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Select the option that best describes your needs, and we'll connect you with the right team members
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+                <!-- Family Consultation Card -->
+                <div class="bg-gradient-to-br from-deep-navy to-charcoal p-8 rounded-2xl shadow-xl text-white">
+                    <div class="w-16 h-16 bg-bitcoin-gold rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">👨‍👩‍👧‍👦</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Family Consultation</h3>
+                    <p class="mb-6 text-gray-300">
+                        For families with $10M+ in Bitcoin holdings seeking comprehensive estate planning and wealth preservation strategies.
+                    </p>
+                    <ul class="space-y-2 mb-6 text-gray-300">
+                        <li class="flex items-center">
+                            <span class="text-bitcoin-gold mr-2">✓</span>
+                            Complimentary portfolio assessment
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-bitcoin-gold mr-2">✓</span>
+                            Multi-generational planning strategy
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-bitcoin-gold mr-2">✓</span>
+                            KEEP Protocol implementation
+                        </li>
+                    </ul>
+                    <a href="/consultation" class="block w-full py-4 bg-bitcoin-gold text-white font-semibold rounded-lg hover:bg-orange-600 transition-all text-center transform hover:scale-105">
+                        Schedule Family Consultation
+                    </a>
+                </div>
                 
-                <div class="contact-options">
-                    <div class="contact-card">
-                        <h3>Family Consultation</h3>
-                        <p>For families with $10M+ in Bitcoin holdings seeking comprehensive estate planning.</p>
-                        <a href="/consultation" class="btn btn-primary">Schedule Consultation</a>
+                <!-- Professional Inquiry Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">⚖️</span>
                     </div>
-                    <div class="contact-card">
-                        <h3>Professional Inquiry</h3>
-                        <p>For attorneys interested in KEEP Protocol certification and professional development.</p>
-                        <a href="/keep-protocol/" class="btn btn-secondary">Learn About KEEP</a>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-deep-navy mb-4">Professional Inquiry</h3>
+                    <p class="mb-6 text-gray-600">
+                        For attorneys, advisors, and professionals interested in KEEP Protocol certification and collaboration opportunities.
+                    </p>
+                    <ul class="space-y-2 mb-6 text-gray-600">
+                        <li class="flex items-center">
+                            <span class="text-bitcoin-gold mr-2">✓</span>
+                            KEEP Protocol certification
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-bitcoin-gold mr-2">✓</span>
+                            Referral partnership programs
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-bitcoin-gold mr-2">✓</span>
+                            Professional development resources
+                        </li>
+                    </ul>
+                    <a href="/keep-protocol/" class="block w-full py-4 bg-deep-navy text-white font-semibold rounded-lg hover:bg-charcoal transition-all text-center">
+                        Explore KEEP Protocol
+                    </a>
                 </div>
-
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>Email: <a href="mailto:contact@sixone02.com">contact@sixone02.com</a></p>
-                    <p>Professional Inquiries: <a href="mailto:professional@sixone02.com">professional@sixone02.com</a></p>
+            </div>
+            
+            <!-- Direct Contact Information -->
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gray-50 rounded-2xl p-8 text-center">
+                    <h3 class="text-2xl font-display font-bold text-deep-navy mb-6">Direct Contact</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <div class="w-12 h-12 bg-bitcoin-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-xl">📧</span>
+                            </div>
+                            <h4 class="font-semibold text-deep-navy mb-2">General Inquiries</h4>
+                            <a href="mailto:contact@sixone02.com" class="text-bitcoin-gold hover:text-orange-600 transition-colors">
+                                contact@sixone02.com
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <div class="w-12 h-12 bg-bitcoin-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-xl">🤝</span>
+                            </div>
+                            <h4 class="font-semibold text-deep-navy mb-2">Professional</h4>
+                            <a href="mailto:professional@sixone02.com" class="text-bitcoin-gold hover:text-orange-600 transition-colors">
+                                professional@sixone02.com
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <div class="w-12 h-12 bg-bitcoin-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-xl">📱</span>
+                            </div>
+                            <h4 class="font-semibold text-deep-navy mb-2">Response Time</h4>
+                            <p class="text-gray-600">Within 24 hours</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Firm6102. All rights reserved.</p>
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-bold text-deep-navy mb-4">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold text-deep-navy mb-3">What is the minimum Bitcoin holding for your services?</h3>
+                    <p class="text-gray-600">
+                        While we work with families at various wealth levels, our comprehensive estate planning services are optimized for those with $10M+ in Bitcoin holdings. For smaller portfolios, we offer educational resources and group consultations.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold text-deep-navy mb-3">How long does the estate planning process take?</h3>
+                    <p class="text-gray-600">
+                        A comprehensive Bitcoin estate plan typically takes 60-90 days to implement, including legal structure creation, KEEP Protocol implementation, and family education. Emergency planning can be expedited to 30 days.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold text-deep-navy mb-3">Do you provide ongoing support after implementation?</h3>
+                    <p class="text-gray-600">
+                        Yes, all our clients receive ongoing support including annual reviews, legislative updates, and access to our client portal. Premium clients also receive 24/7 emergency support and quarterly strategy sessions.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold text-deep-navy mb-3">Can you work with my existing legal team?</h3>
+                    <p class="text-gray-600">
+                        Absolutely. We regularly collaborate with family offices, tax advisors, and estate attorneys. Our KEEP Protocol certification program also enables your existing advisors to become Bitcoin-proficient.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 hero-gradient">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-display font-bold text-white mb-4">
+                Ready to Secure Your Bitcoin Legacy?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Don't wait for another Executive Order 6102. Protect your wealth today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/consultation" class="px-8 py-4 bg-bitcoin-gold text-white font-semibold rounded-lg hover:bg-orange-600 transition-all transform hover:scale-105">
+                    Schedule Consultation Now
+                </a>
+                <a href="/resources/" class="px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-deep-navy transition-all">
+                    Download Free Guide
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as homepage) -->
+    <footer class="bg-deep-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-8">
+                <div class="md:col-span-1">
+                    <div class="text-2xl font-bold mb-4">
+                        FIRM<span class="text-bitcoin-gold">6102</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Architects of Sovereign Wealth in the Digital Age
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Bitcoin Sovereignty</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/bitcoin-sovereignty/" class="hover:text-bitcoin-gold transition-colors">Sovereignty Hub</a></li>
+                        <li><a href="/bitcoin-sovereignty/executive-order-6102" class="hover:text-bitcoin-gold transition-colors">Executive Order 6102</a></li>
+                        <li><a href="/government-policy/" class="hover:text-bitcoin-gold transition-colors">Government Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/services/bitcoin-estate-planning" class="hover:text-bitcoin-gold transition-colors">Estate Planning</a></li>
+                        <li><a href="/keep-protocol/" class="hover:text-bitcoin-gold transition-colors">KEEP Protocol</a></li>
+                        <li><a href="/services/family-office" class="hover:text-bitcoin-gold transition-colors">Family Office</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/resources/" class="hover:text-bitcoin-gold transition-colors">Resource Center</a></li>
+                        <li><a href="/states/" class="hover:text-bitcoin-gold transition-colors">State Guides</a></li>
+                        <li><a href="/resources/guides" class="hover:text-bitcoin-gold transition-colors">Planning Guides</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/about" class="hover:text-bitcoin-gold transition-colors">About Us</a></li>
+                        <li><a href="/contact" class="hover:text-bitcoin-gold transition-colors">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-bitcoin-gold transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Firm6102. All rights reserved. | Professional Bitcoin Estate Planning Services</p>
             </div>
         </div>
     </footer>
-
-    <script src="/js/main.js"></script>
 </body>
 </html>
