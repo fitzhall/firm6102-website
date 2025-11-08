@@ -103,8 +103,21 @@
         }
 
         @media (max-width: 768px) {
+            .contact-container {
+                padding: var(--space-md);
+            }
+
             .contact-box {
-                padding: 0 var(--padding);
+                padding: 0;
+            }
+
+            .contact-box h1 {
+                font-size: var(--fs-h2);
+            }
+
+            .form-input,
+            .form-textarea {
+                font-size: 16px; /* Prevents iOS zoom on focus */
             }
         }
     </style>

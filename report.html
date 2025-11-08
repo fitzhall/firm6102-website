@@ -151,8 +151,24 @@
         }
 
         @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                padding: var(--space-lg);
+                max-height: 90vh;
+                overflow-y: auto;
+            }
+
             .email-form {
                 flex-direction: column;
+            }
+
+            .modal-content h2 {
+                font-size: var(--fs-h3);
+            }
+
+            .close-modal {
+                font-size: 2rem;
+                padding: 0.5rem;
             }
 
             .report-box h1 {
@@ -161,6 +177,11 @@
 
             .report-box p {
                 font-size: var(--fs-body);
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 1rem 1.5rem;
             }
         }
     </style>

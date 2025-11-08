@@ -377,35 +377,114 @@ em {
    Responsive
    ======================================== */
 @media (max-width: 768px) {
+    :root {
+        --padding: 1.25rem;
+        --space-lg: 2.5rem;
+        --space-xl: 3rem;
+        --space-2xl: 4rem;
+    }
+
+    .nav {
+        padding: var(--space-md) 0;
+    }
+
     .nav-container {
-        flex-direction: column;
         gap: var(--space-md);
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: var(--space-sm);
+        gap: var(--space-md);
+        font-size: 0.875rem;
     }
 
     .hero {
         padding: var(--space-xl) 0;
     }
 
+    .hero-title {
+        max-width: 100%;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+    }
+
     .section {
         padding: var(--space-xl) 0;
     }
 
+    .section-title {
+        margin-bottom: var(--space-lg);
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .service-card {
+        padding: var(--space-md);
     }
 
     .email-form {
         flex-direction: column;
     }
 
+    .lead-magnet {
+        padding: var(--space-lg) var(--padding);
+    }
+
+    .signature {
+        padding: var(--space-lg) 0;
+    }
+
+    .footer {
+        margin-top: var(--space-xl);
+        padding: var(--space-lg) 0 var(--space-md);
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: var(--space-sm);
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    :root {
+        --padding: 1rem;
+    }
+
+    .nav-links {
+        gap: var(--space-sm);
+    }
+
+    .hero-cta .btn,
+    .lead-magnet .btn {
+        font-size: 0.875rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .nav-links a,
+    a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0;
     }
 }
 

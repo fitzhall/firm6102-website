@@ -86,6 +86,37 @@
             font-size: var(--fs-small);
             color: var(--gray-medium);
         }
+
+        @media (max-width: 768px) {
+            body {
+                padding: var(--space-md) var(--padding);
+            }
+
+            .letter-container {
+                padding: var(--space-md) 0;
+            }
+
+            .letter-container h1 {
+                font-size: var(--fs-h2);
+            }
+
+            .cta-box {
+                padding: var(--space-lg);
+                margin: var(--space-lg) 0;
+            }
+
+            .cta-box .price {
+                font-size: var(--fs-h2);
+            }
+
+            .cta-box ul {
+                max-width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
