@@ -665,6 +665,95 @@
                 font-size: 0.75rem;
                 padding: 0.5rem 1rem;
             }
+
+            /* Scale down all cards for mobile */
+            .card {
+                width: 85% !important;
+                max-width: 340px;
+                padding: 1.5rem;
+            }
+
+            .hero-card {
+                width: 90% !important;
+                max-width: 360px;
+            }
+
+            .hero-card h1 {
+                font-size: 2rem;
+            }
+
+            .hero-card .subtitle {
+                font-size: 1rem;
+            }
+
+            .calculator-card {
+                width: 90% !important;
+                max-width: 360px;
+            }
+
+            .timeline-card {
+                width: 85% !important;
+                max-width: 340px;
+            }
+
+            .vector-card {
+                width: 85% !important;
+                max-width: 300px;
+            }
+
+            .score-card {
+                width: 90% !important;
+                max-width: 360px;
+            }
+
+            .score-card h2 {
+                font-size: 1.75rem;
+            }
+
+            .score-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .score-item h4 {
+                font-size: 0.75rem;
+            }
+
+            .score-number {
+                font-size: 1.75rem;
+            }
+
+            .score-label {
+                font-size: 0.7rem;
+            }
+
+            .roi-card {
+                width: 90% !important;
+                max-width: 360px;
+            }
+
+            .result-value {
+                font-size: 2rem;
+            }
+
+            .deliverable-card {
+                width: 85% !important;
+                max-width: 320px;
+            }
+
+            .deliverable-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .deliverable-card p {
+                font-size: 0.85rem;
+            }
+
+            /* Section headers */
+            .section-header {
+                font-size: 1.1rem !important;
+                padding: 0.4rem 1rem;
+            }
         }
 
         /* Mini-map */
@@ -1042,7 +1131,12 @@
             if (index >= 0 && index < sections.length) {
                 currentSectionIndex = index;
                 const section = sections[index];
-                panTo(section.x, section.y, section.scale, section.name);
+                // Adjust scale for mobile - use smaller zoom levels to fit content
+                let targetScale = section.scale;
+                if (isMobile()) {
+                    targetScale = section.scale * 0.5; // 50% of desktop scale for mobile
+                }
+                panTo(section.x, section.y, targetScale, section.name);
             }
         }
 
@@ -1145,7 +1239,8 @@
         const overviewBtn = document.getElementById('overviewBtn');
         overviewBtn.addEventListener('click', () => {
             currentSectionIndex = -1;
-            panTo(1000, 500, 0.35, 'Overview');
+            const overviewScale = isMobile() ? 0.15 : 0.35;
+            panTo(1000, 500, overviewScale, 'Overview');
         });
 
         // Mobile navigation buttons
