@@ -24,4 +24,4 @@ Allow: /
 Disallow: /audit.html
 
 # Sitemap
-Sitemap: https://sixone02.com/sitemap.xml
+Sitemap: https://firm6102.com/sitemap.xml
