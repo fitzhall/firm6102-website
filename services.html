@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Fiduciary Services for Bitcoin Trusts | Firm6102</title>
+    <meta name="description" content="Institutional Bitcoin governance services: Implementation Audits, Continuity Retainers, and Succession Execution. We build multisig architecture, hash-bind trust deeds, and manage technical handovers for family offices and trustees.">
+    <meta name="keywords" content="bitcoin trust services, technical fiduciary, multisig governance, bitcoin inheritance, digital asset executor, institutional bitcoin custody, hash-binding trust deed">
+    <meta name="author" content="Fitzgerald Hall, Firm6102">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://firm6102.com/services.html">
+    <meta property="og:title" content="Technical Fiduciary Services for Bitcoin Trusts">
+    <meta property="og:description" content="Implementation Audits, Continuity Retainers, and Succession Execution for institutional Bitcoin holders.">
+    <meta property="og:image" content="https://firm6102.com/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://firm6102.com/services.html">
+    <meta property="twitter:title" content="Technical Fiduciary Services for Bitcoin Trusts">
+    <meta property="twitter:description" content="Implementation Audits, Continuity Retainers, and Succession Execution for institutional Bitcoin holders.">
+    <meta property="twitter:image" content="https://firm6102.com/assets/images/og-image.jpg">
+    <meta name="twitter:creator" content="@backedxbitcoin">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://firm6102.com/services.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Technical Fiduciary Services",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Firm6102",
+        "url": "https://firm6102.com"
+      },
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bitcoin Governance Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Implementation Audit",
+              "description": "Multisig architecture design, asset retitling, and hash-binding trust deeds to blockchain"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Continuity Retainer",
+              "description": "Quarterly heartbeat checks, hardware rotation, and annual succession fire drills"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Succession Execution",
+              "description": "Managed technical handover protocol ensuring heirs receive assets without trustee technical expertise"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/sovereign.css">
+
+    <style>
+        /* Service Pillars */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .pillar {
+            padding: var(--space-lg);
+            border: 1px solid var(--gray-light);
+            position: relative;
+        }
+
+        .pillar-label {
+            font-size: var(--fs-small);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: var(--space-sm);
+        }
+
+        .pillar h3 {
+            font-size: var(--fs-h3);
+            margin-bottom: var(--space-md);
+        }
+
+        .pillar p {
+            color: var(--gray-medium);
+            font-size: var(--fs-small);
+            margin-bottom: var(--space-md);
+        }
+
+        .pillar-features {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-md) 0 0 0;
+            border-top: 1px solid var(--gray-light);
+            padding-top: var(--space-md);
+        }
+
+        .pillar-features li {
+            font-size: var(--fs-small);
+            padding: var(--space-xs) 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .pillar-features li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+            width: 8px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        /* Security Section */
+        .security-section {
+            background: var(--black);
+            color: var(--white);
+            padding: var(--space-2xl) var(--padding);
+            margin: var(--space-2xl) 0;
+        }
+
+        .security-section h2 {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .security-item h4 {
+            color: var(--gold);
+            font-family: var(--font-sans);
+            font-size: var(--fs-small);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-sm);
+        }
+
+        .security-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: var(--fs-small);
+            max-width: 100%;
+        }
+
+        /* Multisig Diagram */
+        .diagram-section {
+            padding: var(--space-2xl) 0;
+            text-align: center;
+        }
+
+        .diagram-container {
+            max-width: 700px;
+            margin: var(--space-xl) auto 0;
+            padding: var(--space-xl);
+            border: 1px solid var(--gray-light);
+        }
+
+        .diagram-title {
+            font-family: var(--font-sans);
+            font-size: var(--fs-small);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-medium);
+            margin-bottom: var(--space-lg);
+        }
+
+        .quorum-display {
+            font-family: var(--font-serif);
+            font-size: var(--fs-h2);
+            color: var(--black);
+            margin-bottom: var(--space-lg);
+        }
+
+        .quorum-display span {
+            color: var(--gold);
+        }
+
+        .key-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .key-node {
+            text-align: center;
+        }
+
+        .key-icon {
+            width: 48px;
+            height: 48px;
+            border: 2px solid var(--gray-light);
+            border-radius: 50%;
+            margin: 0 auto var(--space-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .key-node.active .key-icon {
+            border-color: var(--gold);
+            background: rgba(212, 165, 116, 0.1);
+        }
+
+        .key-label {
+            font-size: 0.75rem;
+            color: var(--gray-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .key-location {
+            font-size: 0.6875rem;
+            color: var(--gray-medium);
+            margin-top: 0.25rem;
+        }
+
+        .diagram-note {
+            font-size: var(--fs-small);
+            color: var(--gray-medium);
+            font-style: italic;
+            max-width: 50ch;
+            margin: 0 auto;
+        }
+
+        /* Who This Is For */
+        .audience-list {
+            list-style: none;
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .audience-list li {
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            gap: var(--space-md);
+            align-items: flex-start;
+        }
+
+        .audience-list li:last-child {
+            border-bottom: none;
+        }
+
+        .audience-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .audience-text strong {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .audience-text span {
+            font-size: var(--fs-small);
+            color: var(--gray-medium);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .security-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .key-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .key-grid .key-node:nth-child(4),
+            .key-grid .key-node:nth-child(5) {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .key-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .key-grid .key-node:last-child {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">Firm6102</a>
+            </div>
+            <div class="nav-links">
+                <a href="services.html">Services</a>
+                <a href="attorneys.html">For Attorneys</a>
+                <a href="insights.html">Insights</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Institutional Bitcoin Governance Services</h1>
+            <p class="hero-subtitle">
+                Technical fiduciary services for global Bitcoin trusts. We bridge the gap between legal architecture and cryptographic execution.
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Pillars -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Three Pillars of Technical Governance</h2>
+            <p class="section-intro">
+                Each engagement is designed as a distinct, high-integrity service. Together, they form a complete governance lifecycle for institutional Bitcoin holdings.
+            </p>
+
+            <div class="pillars-grid">
+                <!-- Pillar 1: The Build -->
+                <div class="pillar">
+                    <div class="pillar-label">The Build</div>
+                    <h3>Implementation Audit</h3>
+                    <p>
+                        We architect your multisig structure, retitle assets into the appropriate legal entity, and hash-bind your trust deed to the blockchain — creating cryptographic proof of governance.
+                    </p>
+                    <ul class="pillar-features">
+                        <li>Multisig architecture design (2-of-3 to 5-of-7)</li>
+                        <li>Jurisdictional key distribution</li>
+                        <li>Trust deed hash-binding (SHA-256)</li>
+                        <li>Asset retitling procedures</li>
+                        <li>Hardware wallet provisioning</li>
+                        <li>Documentation & chain of custody</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2: The Guard -->
+                <div class="pillar">
+                    <div class="pillar-label">The Guard</div>
+                    <h3>Continuity Retainer</h3>
+                    <p>
+                        Ongoing governance maintenance to prevent bit-rot, verify keyholder status, and ensure your structure remains operational across time and personnel changes.
+                    </p>
+                    <ul class="pillar-features">
+                        <li>Quarterly "heartbeat" verification</li>
+                        <li>Hardware rotation schedules</li>
+                        <li>Keyholder lifecycle management</li>
+                        <li>Annual succession fire drills</li>
+                        <li>Firmware & security updates</li>
+                        <li>Documentation maintenance</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3: The Transfer -->
+                <div class="pillar">
+                    <div class="pillar-label">The Transfer</div>
+                    <h3>Succession Execution</h3>
+                    <p>
+                        When the time comes, we manage the technical handover — ensuring beneficiaries receive assets without the trustee or executor needing cryptographic expertise.
+                    </p>
+                    <ul class="pillar-features">
+                        <li>Trigger event verification</li>
+                        <li>Beneficiary identity confirmation</li>
+                        <li>Coordinated signing ceremonies</li>
+                        <li>New wallet provisioning for heirs</li>
+                        <li>Chain of custody documentation</li>
+                        <li>Post-transition support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multisig Diagram -->
+    <section class="diagram-section">
+        <div class="container">
+            <h2 class="section-title">Global Multisig Architecture</h2>
+            <p class="section-intro">
+                We distribute keys across legal jurisdictions to create both security and "legal impossibility" — the foundation of asset protection.
+            </p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Example Configuration</div>
+                <div class="quorum-display"><span>3</span> of <span>5</span> Required to Move Funds</div>
+
+                <div class="key-grid">
+                    <div class="key-node active">
+                        <div class="key-icon">1</div>
+                        <div class="key-label">Principal</div>
+                        <div class="key-location">Wyoming, USA</div>
+                    </div>
+                    <div class="key-node active">
+                        <div class="key-icon">2</div>
+                        <div class="key-label">Trustee</div>
+                        <div class="key-location">Cook Islands</div>
+                    </div>
+                    <div class="key-node active">
+                        <div class="key-icon">3</div>
+                        <div class="key-label">Technical Fiduciary</div>
+                        <div class="key-location">Switzerland</div>
+                    </div>
+                    <div class="key-node">
+                        <div class="key-icon">4</div>
+                        <div class="key-label">Family Office</div>
+                        <div class="key-location">Singapore</div>
+                    </div>
+                    <div class="key-node">
+                        <div class="key-icon">5</div>
+                        <div class="key-label">Backup</div>
+                        <div class="key-location">Bank Vault</div>
+                    </div>
+                </div>
+
+                <p class="diagram-note">
+                    No single jurisdiction can compel movement of funds. No single party can act unilaterally.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Compliance -->
+    <section class="security-section">
+        <h2>Institutional-Grade Security Protocols</h2>
+        <div class="security-grid">
+            <div class="security-item">
+                <h4>Chain of Custody</h4>
+                <p>
+                    All keys managed under Tamper-Evident Bag (TEB) protocols with verified serial logs. Every handoff documented. Every access logged.
+                </p>
+            </div>
+            <div class="security-item">
+                <h4>Jurisdictional Diversity</h4>
+                <p>
+                    Key storage distributed across multiple legal jurisdictions. No single government can compel a quorum. Geographic redundancy against localized threats.
+                </p>
+            </div>
+            <div class="security-item">
+                <h4>Air-Gapped Operations</h4>
+                <p>
+                    Signing ceremonies conducted on air-gapped devices. No private key material ever touches a networked computer. Hardware verification at every step.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Who These Services Are For</h2>
+
+            <ul class="audience-list">
+                <li>
+                    <div class="audience-text">
+                        <strong>Family Offices & Private Trustees</strong>
+                        <span>Managing Bitcoin across generations with institutional rigor and fiduciary accountability.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="audience-text">
+                        <strong>Estate Planning & Asset Protection Attorneys</strong>
+                        <span>Seeking technical execution partners for trusts holding digital assets. <a href="attorneys.html">See our attorney partnership model.</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="audience-text">
+                        <strong>Corporate Treasury Managers</strong>
+                        <span>Implementing governance frameworks for Bitcoin held on corporate balance sheets.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="audience-text">
+                        <strong>High-Net-Worth Individuals</strong>
+                        <span>Building "family bank" structures with professional governance from day one.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="lead-magnet">
+        <div class="container">
+            <h2>Ready to Build Institutional Governance?</h2>
+            <p>
+                Schedule a confidential assessment to discuss your structure, jurisdiction, and governance requirements.
+            </p>
+            <a href="contact.html" class="btn btn-primary">Request Assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    &copy; Firm6102 — Technical Fiduciary Services
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/fitzgeraldhall/">LinkedIn</a>
+                    <a href="https://x.com/backedxbitcoin">X</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
