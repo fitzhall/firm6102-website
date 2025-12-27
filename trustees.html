@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Trustees & Fiduciaries | Bitcoin Trust Administration | Firm6102</title>
+    <meta name="description" content="Technical fiduciary services for trustees administering Bitcoin trusts. We solve the continuity problem: hardware rotation, keyholder management, succession fire drills, and technical execution of distributions.">
+    <meta name="keywords" content="bitcoin trustee, bitcoin trust administration, digital asset trustee, bitcoin fiduciary, trust continuity, bitcoin hardware rotation, trustee liability bitcoin">
+    <meta name="author" content="Fitzgerald Hall, Firm6102">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://firm6102.com/trustees.html">
+    <meta property="og:title" content="For Trustees & Fiduciaries | Bitcoin Trust Administration">
+    <meta property="og:description" content="We solve the continuity problem. Technical fiduciary services for trustees administering Bitcoin trusts.">
+    <meta property="og:image" content="https://firm6102.com/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://firm6102.com/trustees.html">
+    <meta property="twitter:title" content="For Trustees & Fiduciaries | Bitcoin Trust Administration">
+    <meta property="twitter:description" content="We solve the continuity problem. Technical fiduciary services for trustees administering Bitcoin trusts.">
+    <meta property="twitter:image" content="https://firm6102.com/assets/images/og-image.jpg">
+    <meta name="twitter:creator" content="@backedxbitcoin">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://firm6102.com/trustees.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Bitcoin Trust Administration Support",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Firm6102",
+        "url": "https://firm6102.com"
+      },
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "ProfessionalAudience",
+        "audienceType": "Trustees, Fiduciaries, Trust Companies, Family Office Trustees"
+      },
+      "description": "Technical fiduciary services for trustees administering Bitcoin trusts, solving continuity challenges including hardware management, keyholder succession, and distribution execution."
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the continuity problem for Bitcoin trustees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike traditional assets, Bitcoin requires active technical maintenance. Hardware wallets degrade, firmware needs updates, keyholders change roles, and the trustee must be able to execute distributions without becoming a technical expert. Without a continuity plan, trusts face catastrophic failure when personnel change or technology evolves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do trustees need to understand Bitcoin technology?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Firm6102 acts as the Technical Fiduciary, handling all technical operations while the trustee maintains legal authority. We provide the technical execution layer so trustees can fulfill their fiduciary duties without becoming cryptocurrency experts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle trustee succession?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We conduct annual succession fire drills to ensure new trustees can assume technical responsibilities. When a trustee changes, we manage the key rotation and re-signing ceremonies to transfer technical authority without compromising security."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/sovereign.css">
+
+    <style>
+        /* Hero adjustment */
+        .trustee-hero {
+            padding: var(--space-2xl) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .trustee-hero h1 {
+            font-size: var(--fs-h1);
+            margin-bottom: var(--space-md);
+        }
+
+        .trustee-hero .hero-subtitle {
+            font-size: var(--fs-h3);
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--gray-medium);
+            max-width: 40ch;
+            margin: 0 auto;
+        }
+
+        /* Problem section */
+        .problem-section {
+            background: var(--gray-light);
+            padding: var(--space-2xl) var(--padding);
+        }
+
+        .problem-section .container {
+            max-width: var(--content-width);
+        }
+
+        .problem-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .problem-section p {
+            margin-bottom: var(--space-md);
+        }
+
+        .problem-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-lg) 0;
+        }
+
+        .problem-list li {
+            padding: var(--space-sm) 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: var(--fs-body);
+        }
+
+        .problem-list li::before {
+            content: "?";
+            position: absolute;
+            left: 0;
+            top: var(--space-sm);
+            width: 1.25rem;
+            height: 1.25rem;
+            background: var(--gold);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Solution section */
+        .solution-section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .solution-section .container {
+            max-width: var(--content-width);
+        }
+
+        .solution-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .solution-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-lg) 0;
+        }
+
+        .solution-list li {
+            padding: var(--space-sm) 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: var(--fs-body);
+        }
+
+        .solution-list li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Continuity framework section */
+        .continuity-section {
+            background: var(--black);
+            color: var(--white);
+            padding: var(--space-2xl) var(--padding);
+            margin: var(--space-xl) 0;
+        }
+
+        .continuity-section .container {
+            max-width: var(--max-width);
+        }
+
+        .continuity-section h2 {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .continuity-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .continuity-item {
+            text-align: center;
+            padding: var(--space-md);
+        }
+
+        .continuity-item .number {
+            font-family: var(--font-serif);
+            font-size: var(--fs-h2);
+            color: var(--gold);
+            margin-bottom: var(--space-sm);
+        }
+
+        .continuity-item h4 {
+            color: var(--white);
+            font-family: var(--font-sans);
+            font-size: var(--fs-small);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-sm);
+        }
+
+        .continuity-item p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: var(--fs-small);
+            max-width: 100%;
+        }
+
+        /* Liability section */
+        .liability-section {
+            padding: var(--space-2xl) 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .liability-section .container {
+            max-width: var(--content-width);
+        }
+
+        .liability-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .liability-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-lg) 0;
+            font-size: var(--fs-small);
+        }
+
+        .liability-table th,
+        .liability-table td {
+            text-align: left;
+            padding: var(--space-md);
+            border-bottom: 1px solid var(--gray-light);
+            vertical-align: top;
+        }
+
+        .liability-table th {
+            font-weight: 600;
+            background: var(--gray-light);
+        }
+
+        .liability-table td:first-child {
+            font-weight: 500;
+        }
+
+        /* Services for trustees */
+        .services-section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .trustee-services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .trustee-service {
+            padding: var(--space-lg);
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .trustee-service h3 {
+            font-size: var(--fs-body);
+            margin-bottom: var(--space-sm);
+        }
+
+        .trustee-service p {
+            font-size: var(--fs-small);
+            color: var(--gray-medium);
+        }
+
+        /* Contact form */
+        .trustee-form-section {
+            padding: var(--space-2xl) 0;
+            background: var(--gray-light);
+        }
+
+        .trustee-form-section .container {
+            max-width: 500px;
+        }
+
+        .trustee-form-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .trustee-form-section .section-intro {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            color: var(--gray-medium);
+        }
+
+        .trustee-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+
+        .form-group label {
+            font-size: var(--fs-small);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.875rem 1rem;
+            font-size: var(--fs-small);
+            border: 1px solid var(--gray-medium);
+            background: var(--white);
+            font-family: var(--font-sans);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--black);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .continuity-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trustee-services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .continuity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .liability-table {
+                font-size: 0.8125rem;
+            }
+
+            .liability-table th,
+            .liability-table td {
+                padding: var(--space-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">Firm6102</a>
+            </div>
+            <div class="nav-links">
+                <a href="services.html">Services</a>
+                <a href="attorneys.html">For Attorneys</a>
+                <a href="trustees.html">For Trustees</a>
+                <a href="insights.html">Insights</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="trustee-hero">
+        <div class="container">
+            <h1>For Trustees & Fiduciaries</h1>
+            <p class="hero-subtitle">
+                We solve the continuity problem.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>The Continuity Problem</h2>
+            <p>
+                You accepted trusteeship of a trust that holds Bitcoin. Now what?
+            </p>
+            <p>
+                Unlike stocks, bonds, or real estate, Bitcoin doesn't sit quietly in a custodian's vault. It requires <em>active technical management</em> — and that management must continue flawlessly for decades, across personnel changes, technology upgrades, and unforeseen crises.
+            </p>
+
+            <ul class="problem-list">
+                <li>What happens when the hardware wallet's firmware becomes obsolete?</li>
+                <li>What happens when a keyholder resigns, dies, or becomes incapacitated?</li>
+                <li>What happens when a beneficiary requests a distribution and you don't know how to execute it?</li>
+                <li>What happens when the trust's creator — the only one who understood the setup — is gone?</li>
+                <li>What happens when you're sued for breach of fiduciary duty due to a technical failure you couldn't have prevented?</li>
+            </ul>
+
+            <p>
+                These aren't hypotheticals. They're the predictable failure modes of every Bitcoin trust without a continuity plan.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section class="solution-section">
+        <div class="container">
+            <h2>The Solution: A Technical Fiduciary Partner</h2>
+            <p>
+                Firm6102 acts as the <strong>Technical Fiduciary</strong> for Bitcoin trusts. We handle all technical operations so you can fulfill your fiduciary duties without becoming a cryptocurrency expert.
+            </p>
+
+            <ul class="solution-list">
+                <li>Quarterly "heartbeat" verification of all keys and hardware</li>
+                <li>Hardware rotation before device obsolescence</li>
+                <li>Keyholder succession management when personnel change</li>
+                <li>Annual succession fire drills to test recovery procedures</li>
+                <li>Technical execution of beneficiary distributions</li>
+                <li>Documentation for fiduciary defense and audit trails</li>
+            </ul>
+
+            <p>
+                You maintain legal authority. We provide the technical execution layer. The trust operates seamlessly across decades.
+            </p>
+        </div>
+    </section>
+
+    <!-- Continuity Framework -->
+    <section class="continuity-section">
+        <div class="container">
+            <h2>The Continuity Retainer: Four Pillars</h2>
+            <div class="continuity-grid">
+                <div class="continuity-item">
+                    <div class="number">1</div>
+                    <h4>Heartbeat Checks</h4>
+                    <p>Quarterly verification that all keys are accessible and hardware is functional.</p>
+                </div>
+                <div class="continuity-item">
+                    <div class="number">2</div>
+                    <h4>Hardware Rotation</h4>
+                    <p>Proactive device replacement before firmware end-of-life creates vulnerability.</p>
+                </div>
+                <div class="continuity-item">
+                    <div class="number">3</div>
+                    <h4>Keyholder Management</h4>
+                    <p>Secure onboarding and offboarding of keyholders as personnel change.</p>
+                </div>
+                <div class="continuity-item">
+                    <div class="number">4</div>
+                    <h4>Succession Drills</h4>
+                    <p>Annual fire drills to ensure successors can assume control without data loss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Liability Protection -->
+    <section class="liability-section">
+        <div class="container">
+            <h2>Protecting Your Fiduciary Position</h2>
+            <p style="text-align: center; max-width: 60ch; margin: 0 auto var(--space-lg);">
+                As a trustee, you have a duty of care over trust assets. For Bitcoin, this creates unique liability exposure.
+            </p>
+
+            <table class="liability-table">
+                <thead>
+                    <tr>
+                        <th>Risk Scenario</th>
+                        <th>Without Technical Fiduciary</th>
+                        <th>With Firm6102</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hardware wallet fails</td>
+                        <td>Trustee personally liable for not maintaining devices</td>
+                        <td>Documented rotation schedule proves duty of care</td>
+                    </tr>
+                    <tr>
+                        <td>Keyholder becomes unavailable</td>
+                        <td>Trust assets potentially locked forever</td>
+                        <td>Succession protocol activates replacement keyholder</td>
+                    </tr>
+                    <tr>
+                        <td>Beneficiary claims delayed distribution</td>
+                        <td>Trustee blamed for technical incompetence</td>
+                        <td>Technical Fiduciary executes distribution per trust terms</td>
+                    </tr>
+                    <tr>
+                        <td>Technology evolves (new signing standards)</td>
+                        <td>Trust structure becomes obsolete</td>
+                        <td>Proactive migration to current best practices</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="text-align: center; margin-top: var(--space-lg);">
+                <strong>Documentation is your defense.</strong> Every action we take is logged, timestamped, and available for audit.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Services for Trustees</h2>
+
+            <div class="trustee-services-grid">
+                <div class="trustee-service">
+                    <h3>Trust Onboarding Assessment</h3>
+                    <p>
+                        Comprehensive review of an existing Bitcoin trust's technical architecture. We document the current state, identify vulnerabilities, and create a continuity roadmap.
+                    </p>
+                </div>
+                <div class="trustee-service">
+                    <h3>Continuity Retainer</h3>
+                    <p>
+                        Ongoing technical fiduciary services: quarterly heartbeats, hardware management, keyholder lifecycle, and annual succession drills. Fixed annual fee, unlimited support.
+                    </p>
+                </div>
+                <div class="trustee-service">
+                    <h3>Distribution Execution</h3>
+                    <p>
+                        When beneficiaries are entitled to distributions, we coordinate the technical signing ceremony and execute the transfer according to trust terms.
+                    </p>
+                </div>
+                <div class="trustee-service">
+                    <h3>Trustee Transition Support</h3>
+                    <p>
+                        When a successor trustee assumes control, we manage the technical handover — re-keying, documentation transfer, and successor training.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Form -->
+    <section class="trustee-form-section">
+        <div class="container">
+            <h2>Schedule a Trust Assessment</h2>
+            <p class="section-intro">
+                Tell us about the trust you administer. We'll schedule a confidential call to discuss your continuity needs.
+            </p>
+
+            <form class="trustee-form" id="trusteeForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Trust Company / Organization</label>
+                    <input type="text" id="organization" name="organization">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Your Role</label>
+                    <select id="role" name="role">
+                        <option value="">Select...</option>
+                        <option value="individual-trustee">Individual Trustee</option>
+                        <option value="corporate-trustee">Corporate Trustee</option>
+                        <option value="trust-officer">Trust Officer</option>
+                        <option value="family-office">Family Office</option>
+                        <option value="other">Other Fiduciary</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Describe the Trust Situation</label>
+                    <textarea id="message" name="message" placeholder="How many trusts? Approximate Bitcoin holdings? Current custody setup? Key challenges?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Request Assessment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Related Resources -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Resources for Trustees</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <h3><a href="insights/fiduciary-technical-checklist-bitcoin-estate-assets.html">A Fiduciary's Technical Checklist</a></h3>
+                    <p>
+                        The four-phase checklist for managing Bitcoin estate assets and fulfilling your fiduciary duty.
+                    </p>
+                </article>
+                <article class="service-card">
+                    <h3><a href="insights/why-multi-sig-fails.html">Why Multi-Sig Fails Without Governance</a></h3>
+                    <p>
+                        Cryptography works perfectly. But without institutional process, multi-sig becomes a coordination disaster.
+                    </p>
+                </article>
+                <article class="service-card">
+                    <h3><a href="services.html">Our Service Pillars</a></h3>
+                    <p>
+                        The Build, The Guard, The Transfer — three pillars of institutional Bitcoin governance.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    &copy; Firm6102 — Technical Fiduciary Services
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/fitzgeraldhall/">LinkedIn</a>
+                    <a href="https://x.com/backedxbitcoin">X</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('trusteeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Trustee form submitted');
+            alert('Thank you for your inquiry. We will be in touch within 24 hours.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
