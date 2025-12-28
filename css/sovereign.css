@@ -157,6 +157,37 @@ em {
     color: var(--gold);
 }
 
+/* Mobile Menu Toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--black);
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* ========================================
    Hero Section
    ======================================== */
@@ -385,16 +416,44 @@ em {
     }
 
     .nav {
-        padding: var(--space-md) 0;
+        padding: var(--space-sm) 0;
     }
 
     .nav-container {
-        gap: var(--space-md);
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
     }
 
     .nav-links {
-        gap: var(--space-md);
-        font-size: 0.875rem;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: var(--space-md) var(--padding);
+        gap: 0;
+        border-bottom: 1px solid var(--gray-light);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: var(--space-sm) 0;
+        border-bottom: 1px solid var(--gray-light);
+        font-size: 1rem;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
     }
 
     .hero {
