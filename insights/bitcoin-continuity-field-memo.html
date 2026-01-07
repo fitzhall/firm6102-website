@@ -63,71 +63,363 @@
     <link rel="stylesheet" href="../css/sovereign.css">
 
     <style>
+        /* Hero Section */
+        .memo-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            padding: var(--space-2xl) 0;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .memo-hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .memo-hero-content {
+            color: var(--white);
+        }
+
         .memo-badge {
             display: inline-block;
             background: var(--gold);
             color: var(--black);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            padding: 0.25rem 0.75rem;
+            padding: 0.35rem 0.875rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
             margin-bottom: var(--space-md);
         }
 
-        .article-content {
-            max-width: var(--content-width);
-            margin: 0 auto;
-            padding: var(--space-2xl) 0;
-        }
-
-        .article-content h2 {
-            margin-top: var(--space-xl);
-            margin-bottom: var(--space-md);
-            border-left: 3px solid var(--gold);
-            padding-left: var(--space-md);
-        }
-
-        .article-content ul {
-            margin-bottom: var(--space-md);
-            padding-left: var(--space-lg);
-        }
-
-        .article-content li {
+        .memo-hero h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            line-height: 1.2;
             margin-bottom: var(--space-sm);
         }
 
-        .callout {
-            background: var(--gray-light);
+        .memo-version {
+            color: #888;
+            font-size: var(--fs-small);
+            letter-spacing: 0.05em;
+        }
+
+        .memo-hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .memo-hero-image img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        /* Main Content */
+        .memo-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        /* Section Headers with Gold Bar */
+        .section-header {
+            display: flex;
+            align-items: stretch;
+            gap: var(--space-md);
+            margin: var(--space-2xl) 0 var(--space-lg) 0;
+        }
+
+        .section-header::before {
+            content: '';
+            width: 4px;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1.3;
+        }
+
+        /* Lead Paragraph */
+        .lead {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: var(--space-lg);
+        }
+
+        /* Regular Paragraphs */
+        .memo-content p {
+            margin-bottom: var(--space-md);
+            line-height: 1.8;
+        }
+
+        /* Signal Cards */
+        .signal-cards {
+            display: grid;
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .signal-card {
+            background: #fafafa;
             border-left: 3px solid var(--gold);
             padding: var(--space-md) var(--space-lg);
-            margin: var(--space-lg) 0;
-            font-style: italic;
         }
 
-        .so-what {
-            background: var(--gray-light);
-            padding: var(--space-md) var(--space-lg);
-            margin: var(--space-lg) 0;
-            border-left: 3px solid var(--black);
-        }
-
-        .so-what strong {
+        .signal-card strong {
+            display: block;
+            margin-bottom: 0.25rem;
             color: var(--black);
         }
 
-        /* Gated Content Styles */
+        .signal-card p {
+            margin: 0;
+            color: #555;
+            font-size: 0.9375rem;
+        }
+
+        /* Failure Points */
+        .failure-grid {
+            display: grid;
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .failure-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--space-md);
+            padding: var(--space-md);
+            background: #fff;
+            border: 1px solid #eee;
+        }
+
+        .failure-icon {
+            width: 40px;
+            height: 40px;
+            background: #fee;
+            color: #c00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            border-radius: 4px;
+        }
+
+        .failure-item h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1rem;
+        }
+
+        .failure-item p {
+            margin: 0;
+            font-size: 0.9375rem;
+            color: #555;
+        }
+
+        /* What Works Items */
+        .works-grid {
+            display: grid;
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .works-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--space-md);
+            padding: var(--space-md);
+            background: #f8faf8;
+            border: 1px solid #e0e8e0;
+        }
+
+        .works-icon {
+            width: 40px;
+            height: 40px;
+            background: #e8f5e8;
+            color: #2a7d2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            border-radius: 4px;
+        }
+
+        .works-item h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1rem;
+        }
+
+        .works-item p {
+            margin: 0;
+            font-size: 0.9375rem;
+            color: #555;
+        }
+
+        /* So What Callout */
+        .so-what {
+            background: #f5f5f0;
+            border-left: 4px solid var(--black);
+            padding: var(--space-md) var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .so-what-label {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .so-what p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Client Callout */
+        .client-callout {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            color: var(--white);
+            padding: var(--space-xl);
+            margin: var(--space-xl) 0;
+            position: relative;
+        }
+
+        .client-callout::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .client-callout h4 {
+            color: var(--gold);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-sm);
+        }
+
+        .client-callout p {
+            margin: 0;
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            color: #ddd;
+        }
+
+        /* 5 Questions */
+        .questions-box {
+            background: #fff;
+            border: 2px solid var(--gold);
+            padding: var(--space-xl);
+            margin: var(--space-lg) 0;
+        }
+
+        .questions-box h3 {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            font-size: 1.125rem;
+        }
+
+        .question-item {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-md);
+            border-bottom: 1px solid #eee;
+        }
+
+        .question-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .question-number {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--black);
+            font-weight: 700;
+            font-size: 1.125rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .question-item p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Workflow Steps */
+        .workflow-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-sm);
+            margin: var(--space-lg) 0;
+        }
+
+        .workflow-step {
+            text-align: center;
+            padding: var(--space-md);
+            background: #fafafa;
+            position: relative;
+        }
+
+        .workflow-step::after {
+            content: '\2192';
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+            font-size: 1.25rem;
+        }
+
+        .workflow-step:last-child::after {
+            display: none;
+        }
+
+        .workflow-step strong {
+            display: block;
+            color: var(--gold);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .workflow-step span {
+            font-size: 0.8125rem;
+            color: #666;
+        }
+
+        /* Gate Styles */
         .gated-wrapper {
             position: relative;
         }
 
-        .gated-content {
-            position: relative;
-        }
-
         .gated-content.locked {
-            max-height: 300px;
+            max-height: 400px;
             overflow: hidden;
+            position: relative;
         }
 
         .gated-content.locked::after {
@@ -136,16 +428,16 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 200px;
+            height: 250px;
             background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
             pointer-events: none;
         }
 
         .gate-overlay {
-            background: var(--gray-light);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
             padding: var(--space-xl);
             text-align: center;
-            margin-top: -100px;
+            margin-top: -80px;
             position: relative;
             z-index: 10;
         }
@@ -155,11 +447,12 @@
         }
 
         .gate-overlay h3 {
+            color: var(--white);
             margin-bottom: var(--space-sm);
         }
 
         .gate-overlay p {
-            color: var(--gray-medium);
+            color: #aaa;
             margin-bottom: var(--space-lg);
             max-width: 500px;
             margin-left: auto;
@@ -169,7 +462,7 @@
         .gate-form {
             display: flex;
             gap: var(--space-sm);
-            max-width: 500px;
+            max-width: 480px;
             margin: 0 auto;
             flex-wrap: wrap;
             justify-content: center;
@@ -179,84 +472,179 @@
             flex: 1;
             min-width: 250px;
             padding: 0.875rem 1rem;
-            font-size: var(--fs-body);
-            border: 1px solid var(--gray-medium);
+            font-size: 1rem;
+            border: none;
             font-family: var(--font-sans);
+            background: var(--white);
         }
 
         .gate-form input[type="email"]:focus {
-            outline: none;
-            border-color: var(--black);
+            outline: 2px solid var(--gold);
         }
 
         .gate-form button {
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            padding: 0.875rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
             white-space: nowrap;
         }
 
+        .gate-form button:hover {
+            background: #d4a84a;
+        }
+
+        /* Download Section */
         .download-section {
-            background: var(--black);
-            color: var(--white);
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
             padding: var(--space-xl);
             text-align: center;
             margin-top: var(--space-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xl);
         }
 
         .download-section.hidden {
             display: none;
         }
 
+        .download-section img {
+            width: 120px;
+            height: auto;
+        }
+
+        .download-text {
+            text-align: left;
+        }
+
         .download-section h3 {
             color: var(--white);
-            margin-bottom: var(--space-sm);
+            margin-bottom: 0.25rem;
+            font-size: 1.25rem;
         }
 
         .download-section p {
-            color: var(--gray-medium);
-            margin-bottom: var(--space-lg);
+            color: #888;
+            margin-bottom: var(--space-md);
+            font-size: 0.9375rem;
         }
 
         .download-section .btn {
             background: var(--gold);
             color: var(--black);
-            border-color: var(--gold);
+            border: none;
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
         }
 
         .download-section .btn:hover {
             background: var(--white);
+        }
+
+        /* Author */
+        .memo-author {
+            border-top: 1px solid #eee;
+            padding-top: var(--space-xl);
+            margin-top: var(--space-2xl);
+            text-align: center;
+        }
+
+        .memo-author p {
+            margin: 0;
+            color: #888;
+            font-size: var(--fs-small);
+        }
+
+        .memo-author strong {
+            display: block;
             color: var(--black);
-            border-color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
         }
 
-        .questions-list {
-            counter-reset: question-counter;
-            list-style: none;
-            padding-left: 0;
+        .memo-author span {
+            color: var(--gold);
         }
 
-        .questions-list li {
-            counter-increment: question-counter;
-            padding-left: var(--space-xl);
-            position: relative;
-            margin-bottom: var(--space-md);
+        /* Related */
+        .related-section {
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid #eee;
         }
 
-        .questions-list li::before {
-            content: counter(question-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 1.5rem;
-            height: 1.5rem;
-            background: var(--gold);
+        .related-section h2 {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-lg);
+        }
+
+        .related-grid {
+            display: grid;
+            gap: var(--space-md);
+        }
+
+        .related-item {
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .related-item:last-child {
+            border-bottom: none;
+        }
+
+        .related-item h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .related-item h3 a {
             color: var(--black);
-            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .related-item h3 a:hover {
+            color: var(--gold);
+        }
+
+        .related-item p {
+            margin: 0;
             font-size: 0.875rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: #666;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
+            .memo-hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .memo-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .memo-hero-image {
+                order: -1;
+            }
+
+            .memo-hero-image img {
+                max-width: 180px;
+            }
+
+            .workflow-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .workflow-step::after {
+                display: none;
+            }
+
             .gate-form {
                 flex-direction: column;
             }
@@ -265,8 +653,13 @@
                 min-width: 100%;
             }
 
-            .gate-form button {
-                width: 100%;
+            .download-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .download-text {
+                text-align: center;
             }
         }
     </style>
@@ -295,188 +688,299 @@
         </div>
     </nav>
 
-    <!-- Article -->
-    <article class="section">
-        <div class="container content">
+    <!-- Hero -->
+    <header class="memo-hero">
+        <div class="container">
+            <div class="memo-hero-inner">
+                <div class="memo-hero-content">
+                    <span class="memo-badge">Field Memo</span>
+                    <h1>Bitcoin Continuity Field Memo</h1>
+                    <p class="memo-version">Q1 2026 | Version 2.1</p>
+                </div>
+                <div class="memo-hero-image">
+                    <img src="../assets/images/continuity-orb.jpg" alt="Bitcoin Continuity">
+                </div>
+            </div>
+        </div>
+    </header>
 
-            <header>
-                <span class="memo-badge">Field Memo</span>
-                <h1 style="margin-bottom: var(--space-sm);">Bitcoin Continuity Field Memo</h1>
-                <p style="color: var(--gray-medium); margin-bottom: var(--space-xl);">Q1 2026 | Version 2.1</p>
-            </header>
+    <!-- Content -->
+    <article>
+        <div class="memo-content">
 
-            <!-- UNGATED CONTENT -->
-            <section class="ungated-content">
-
+            <!-- Executive Summary -->
+            <div class="section-header">
                 <h2>Executive Summary</h2>
+            </div>
 
-                <p>
-                    We're seeing a new premium client segment emerge inside CPA firms: self-custody Bitcoin holders with meaningful exposure. The risk profile is different from traditional assets because Bitcoin is a bearer asset—control is operational, not just legal.
-                </p>
+            <p class="lead">
+                We're seeing a new premium client segment emerge inside CPA firms: self-custody Bitcoin holders with meaningful exposure.
+            </p>
 
-                <p>
-                    Most families have security tactics, but very few have continuity: a plan that survives death, incapacity, and the slow decay of keyholders and procedures over time.
-                </p>
+            <p>
+                The risk profile is different from traditional assets because Bitcoin is a bearer asset—control is operational, not just legal. Most families have security tactics, but very few have <strong>continuity</strong>: a plan that survives death, incapacity, and the slow decay of keyholders and procedures over time.
+            </p>
 
-                <p>
-                    This memo summarizes what breaks first, what holds up, and a simple screen CPAs can use to identify continuity-critical clients without becoming technical experts.
-                </p>
+            <p>
+                This memo summarizes what breaks first, what holds up, and a simple screen CPAs can use to identify continuity-critical clients without becoming technical experts.
+            </p>
 
+            <!-- Signals -->
+            <div class="section-header">
                 <h2>Signals: How to Spot These Clients in Your Book</h2>
+            </div>
 
-                <p>You likely already have them. Watch for these three patterns:</p>
+            <p>You likely already have them. Watch for these three patterns:</p>
 
-                <ul>
-                    <li><strong>Bitcoin is material vs. liquid net worth.</strong> Holdings represent a significant portion of the client's liquid wealth.</li>
-                    <li><strong>"Can we put this in the trust?" or "What happens if I die?"</strong> These questions signal the client is thinking about continuity but doesn't have a plan.</li>
-                    <li><strong>Holdings are fragmented.</strong> Bitcoin sits across exchange accounts, hardware wallets, mobile wallets, and "misc wallets" with no unified map.</li>
-                </ul>
+            <div class="signal-cards">
+                <div class="signal-card">
+                    <strong>Bitcoin is material vs. liquid net worth</strong>
+                    <p>Holdings represent a significant portion of the client's liquid wealth.</p>
+                </div>
+                <div class="signal-card">
+                    <strong>"Can we put this in the trust?" or "What happens if I die?"</strong>
+                    <p>These questions signal the client is thinking about continuity but doesn't have a plan.</p>
+                </div>
+                <div class="signal-card">
+                    <strong>Holdings are fragmented</strong>
+                    <p>Bitcoin sits across exchange accounts, hardware wallets, mobile wallets, and "misc wallets" with no unified map.</p>
+                </div>
+            </div>
 
+            <!-- One Big Pattern -->
+            <div class="section-header">
                 <h2>The One Big Pattern: From "Owning" to "Governing"</h2>
+            </div>
 
-                <p>
-                    The most sophisticated clients are no longer just "owning" Bitcoin; they are building systems to govern it. As holdings grow and setups become more complex (often a mix of exchange accounts, hardware wallets, and trust structures), the primary risk shifts from price volatility to continuity failure.
-                </p>
+            <p>
+                The most sophisticated clients are no longer just "owning" Bitcoin; they are building systems to govern it. As holdings grow and setups become more complex (often a mix of exchange accounts, hardware wallets, and trust structures), the primary risk shifts from price volatility to continuity failure.
+            </p>
 
-                <p>
-                    Tax returns don't fail—access and operational control fails.
-                </p>
+            <p>
+                <strong>Tax returns don't fail—access and operational control fails.</strong>
+            </p>
 
-                <p>
-                    This creates a recurring advisory opportunity for the CPA firm that can quarterback the process, align the legal and technical layers, and ensure the client's plan remains resilient year after year.
-                </p>
+            <p>
+                This creates a recurring advisory opportunity for the CPA firm that can quarterback the process, align the legal and technical layers, and ensure the client's plan remains resilient year after year.
+            </p>
 
-            </section>
-
-            <!-- GATED CONTENT -->
+            <!-- GATED CONTENT STARTS -->
             <div class="gated-wrapper">
-                <section class="gated-content locked" id="gatedContent">
+                <div class="gated-content locked" id="gatedContent">
 
-                    <h2>Where Setups Fail: Common Break Points</h2>
+                    <!-- Where Setups Fail -->
+                    <div class="section-header">
+                        <h2>Where Setups Fail: Common Break Points</h2>
+                    </div>
 
-                    <p>
-                        These are the most common failure modes we see in the field. They represent a gap between a client's intentions and the operational reality of their setup.
-                    </p>
+                    <p>These are the most common failure modes we see in the field. They represent a gap between a client's intentions and the operational reality of their setup.</p>
 
-                    <ul>
-                        <li><strong>Exchange-Heavy Custody:</strong> Relies on a single institution, creating access bottlenecks at death or incapacity due to 2FA and account control issues.</li>
-                        <li><strong>Single-Seed Wallet:</strong> A single point of failure where the loss or discovery of one seed phrase can compromise the entire holding, with no recourse.</li>
-                        <li><strong>"Paper Trust" Only:</strong> The legal language exists in a trust document, but there is no corresponding operational recovery plan for the trustee to execute.</li>
-                        <li><strong>Multisig Without Governance:</strong> The technical setup is in place, but keyholders drift, no drills are performed, and there is no defined logic for replacing a lost or unavailable keyholder.</li>
-                        <li><strong>Fragmented Basis & Records:</strong> Exchange exports, wallet transfers, and prior-year gaps make audits and estate administration slow and expensive.</li>
-                    </ul>
+                    <div class="failure-grid">
+                        <div class="failure-item">
+                            <div class="failure-icon">!</div>
+                            <div>
+                                <h4>Exchange-Heavy Custody</h4>
+                                <p>Relies on a single institution, creating access bottlenecks at death or incapacity due to 2FA and account control issues.</p>
+                            </div>
+                        </div>
+                        <div class="failure-item">
+                            <div class="failure-icon">!</div>
+                            <div>
+                                <h4>Single-Seed Wallet</h4>
+                                <p>A single point of failure where the loss or discovery of one seed phrase can compromise the entire holding, with no recourse.</p>
+                            </div>
+                        </div>
+                        <div class="failure-item">
+                            <div class="failure-icon">!</div>
+                            <div>
+                                <h4>"Paper Trust" Only</h4>
+                                <p>The legal language exists in a trust document, but there is no corresponding operational recovery plan for the trustee to execute.</p>
+                            </div>
+                        </div>
+                        <div class="failure-item">
+                            <div class="failure-icon">!</div>
+                            <div>
+                                <h4>Multisig Without Governance</h4>
+                                <p>The technical setup is in place, but keyholders drift, no drills are performed, and there is no defined logic for replacing a lost or unavailable keyholder.</p>
+                            </div>
+                        </div>
+                        <div class="failure-item">
+                            <div class="failure-icon">!</div>
+                            <div>
+                                <h4>Fragmented Basis & Records</h4>
+                                <p>Exchange exports, wallet transfers, and prior-year gaps make audits and estate administration slow and expensive.</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="so-what">
-                        <strong>So what:</strong> Most clients have security tactics, but they lack a durable continuity operating system. Their plans are brittle and likely to fail under stress.
+                        <div class="so-what-label">So What</div>
+                        <p>Most clients have security tactics, but they lack a durable continuity operating system. Their plans are brittle and likely to fail under stress.</p>
                     </div>
 
-                    <h2>What Works: The Resilient Operating System</h2>
+                    <!-- What Works -->
+                    <div class="section-header">
+                        <h2>What Works: The Resilient Operating System</h2>
+                    </div>
 
-                    <p>
-                        The most durable continuity plans are not one-time fixes; they are living systems built on a few repeatable components. These elements work together to ensure control can be maintained and transferred reliably over time.
-                    </p>
+                    <p>The most durable continuity plans are not one-time fixes; they are living systems built on a few repeatable components.</p>
 
-                    <ul>
-                        <li><strong>A Written Continuity Map:</strong> A clear document outlining all assets, roles, key custody arrangements, and recovery paths.</li>
-                        <li><strong>An Aligned Control Layer:</strong> The technical setup (e.g., multisig) actually matches the roles and permissions described in the legal documents.</li>
-                        <li><strong>Annual Drills & "Break Glass" Tests:</strong> Regular, structured walkthroughs of recovery procedures to ensure they work and keyholders are prepared.</li>
-                        <li><strong>Active Keyholder Governance:</strong> A defined process for check-ins with keyholders and a clear protocol for replacing them if one becomes unavailable.</li>
-                    </ul>
+                    <div class="works-grid">
+                        <div class="works-item">
+                            <div class="works-icon">&#10003;</div>
+                            <div>
+                                <h4>A Written Continuity Map</h4>
+                                <p>A clear document outlining all assets, roles, key custody arrangements, and recovery paths.</p>
+                            </div>
+                        </div>
+                        <div class="works-item">
+                            <div class="works-icon">&#10003;</div>
+                            <div>
+                                <h4>An Aligned Control Layer</h4>
+                                <p>The technical setup (e.g., multisig) actually matches the roles and permissions described in the legal documents.</p>
+                            </div>
+                        </div>
+                        <div class="works-item">
+                            <div class="works-icon">&#10003;</div>
+                            <div>
+                                <h4>Annual Drills & "Break Glass" Tests</h4>
+                                <p>Regular, structured walkthroughs of recovery procedures to ensure they work and keyholders are prepared.</p>
+                            </div>
+                        </div>
+                        <div class="works-item">
+                            <div class="works-icon">&#10003;</div>
+                            <div>
+                                <h4>Active Keyholder Governance</h4>
+                                <p>A defined process for check-ins with keyholders and a clear protocol for replacing them if one becomes unavailable.</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="so-what">
-                        <strong>So what:</strong> The best outcomes come from aligning the legal structure with the operational reality and then drilling it annually. The CPA is the natural hub for this process.
+                        <div class="so-what-label">So What</div>
+                        <p>The best outcomes come from aligning the legal structure with the operational reality and then drilling it annually. The CPA is the natural hub for this process.</p>
                     </div>
 
-                    <div class="callout">
-                        <strong>Client-Facing Explanation (Forwardable):</strong><br>
-                        Bitcoin is a bearer asset. A trust or will can say who should inherit it, but that doesn't automatically give them the ability to access it. Continuity means your legal plan and your access plan match—and that you test it periodically.
+                    <!-- Client Facing -->
+                    <div class="client-callout">
+                        <h4>Client-Facing Explanation (Forwardable)</h4>
+                        <p>Bitcoin is a bearer asset. A trust or will can say who should inherit it, but that doesn't automatically give them the ability to access it. Continuity means your legal plan and your access plan match—and that you test it periodically.</p>
                     </div>
 
-                    <h2>The Tool: 5 Questions to Identify Continuity-Critical Clients</h2>
+                    <!-- 5 Questions -->
+                    <div class="section-header">
+                        <h2>The Tool: 5 Questions to Identify Continuity-Critical Clients</h2>
+                    </div>
+
+                    <p>If the answer is "No" or "Not sure" to any of these questions, the client has a critical continuity risk that needs to be addressed.</p>
+
+                    <div class="questions-box">
+                        <h3>The 5-Question Screen</h3>
+                        <div class="question-item">
+                            <div class="question-number">1</div>
+                            <p>If you were unavailable for 30 days, could your spouse or trustee access your Bitcoin without guessing?</p>
+                        </div>
+                        <div class="question-item">
+                            <div class="question-number">2</div>
+                            <p>Is there a written map of who can access it and how?</p>
+                        </div>
+                        <div class="question-item">
+                            <div class="question-number">3</div>
+                            <p>Have you tested recovery in the last 12 months?</p>
+                        </div>
+                        <div class="question-item">
+                            <div class="question-number">4</div>
+                            <p>If a keyholder becomes unavailable or uncooperative, is there a defined process to replace them?</p>
+                        </div>
+                        <div class="question-item">
+                            <div class="question-number">5</div>
+                            <p>Are your tax and basis records organized well enough to survive an audit or estate administration without your involvement?</p>
+                        </div>
+                    </div>
+
+                    <!-- Next Step -->
+                    <div class="section-header">
+                        <h2>The Next Step: A Low-Friction Workflow</h2>
+                    </div>
 
                     <p>
-                        If the answer is "No" or "Not sure" to any of these questions, the client has a critical continuity risk that needs to be addressed. This screen allows you to flag at-risk clients in minutes, without needing to be a technical expert.
+                        The goal is not to become a Bitcoin custody expert, but to own the client relationship and quarterback the solution.
                     </p>
 
-                    <ol class="questions-list">
-                        <li>If you were unavailable for 30 days, could your spouse or trustee access your Bitcoin without guessing?</li>
-                        <li>Is there a written map of who can access it and how?</li>
-                        <li>Have you tested recovery in the last 12 months?</li>
-                        <li>If a keyholder (the person holding a key or access credential) becomes unavailable or uncooperative, is there a defined process to replace them?</li>
-                        <li>Are your tax and basis records organized well enough to survive an audit or estate administration without your involvement?</li>
-                    </ol>
-
-                    <h2>The Next Step: A Low-Friction Workflow</h2>
-
-                    <p>
-                        The goal is not to become a Bitcoin custody expert, but to own the client relationship and quarterback the solution. By using the 5-question screen, you can flag high-risk clients and introduce a simple, low-friction workflow:
-                    </p>
-
-                    <ul>
-                        <li><strong>Identify</strong> the risk</li>
-                        <li><strong>Triage</strong> the weak points with a continuity checkup</li>
-                        <li><strong>Fix</strong> the gaps by coordinating with legal and technical experts</li>
-                        <li><strong>Maintain</strong> the plan with an annual review</li>
-                    </ul>
+                    <div class="workflow-steps">
+                        <div class="workflow-step">
+                            <strong>Identify</strong>
+                            <span>Flag the risk</span>
+                        </div>
+                        <div class="workflow-step">
+                            <strong>Triage</strong>
+                            <span>Continuity checkup</span>
+                        </div>
+                        <div class="workflow-step">
+                            <strong>Fix</strong>
+                            <span>Coordinate experts</span>
+                        </div>
+                        <div class="workflow-step">
+                            <strong>Maintain</strong>
+                            <span>Annual review</span>
+                        </div>
+                    </div>
 
                     <p>
                         This protects your client, mitigates firm risk, and opens a new, high-value retainer lane of recurring advisory revenue.
                     </p>
 
-                    <hr style="border: none; border-top: 1px solid var(--gray-light); margin: var(--space-xl) 0;">
+                    <!-- Author -->
+                    <div class="memo-author">
+                        <p>Confidential draft for professional discussion. Not legal or tax advice.</p>
+                        <strong>Fitzgerald Hall</strong>
+                        <span>Founder, Firm6102</span>
+                    </div>
 
-                    <p style="color: var(--gray-medium); font-size: var(--fs-small);">
-                        Confidential draft for professional discussion. Not legal or tax advice.
-                    </p>
-
-                    <p>
-                        <strong>Fitzgerald Hall</strong><br>
-                        <span style="color: var(--gold);">Founder, Firm6102</span>
-                    </p>
-
-                </section>
+                </div>
 
                 <!-- Gate Overlay -->
                 <div class="gate-overlay" id="gateOverlay">
                     <h3>Continue Reading</h3>
-                    <p>
-                        Enter your email to unlock the full memo, including the 5-question screening tool and the low-friction workflow for serving these clients.
-                    </p>
+                    <p>Enter your email to unlock the full memo, including the 5-question screening tool and low-friction workflow.</p>
                     <form class="gate-form" id="gateForm">
                         <input type="email" id="gateEmail" placeholder="you@firm.com" required>
-                        <button type="submit" class="btn btn-primary">Unlock Full Memo</button>
+                        <button type="submit">Unlock Full Memo</button>
                     </form>
                 </div>
             </div>
 
-            <!-- Download Section (Hidden until unlocked) -->
+            <!-- Download Section -->
             <div class="download-section hidden" id="downloadSection">
-                <h3>Download the Full Memo</h3>
-                <p>Save a copy to share with your team or reference later.</p>
-                <a href="../assets/downloads/Bitcoin_Continuity_Field_Memo_Q1_2026.pdf" class="btn" download>Download PDF</a>
-            </div>
-
-            <h2 style="margin-top: var(--space-2xl);">Related Articles</h2>
-
-            <div style="display: grid; gap: var(--space-md); margin-top: var(--space-lg); margin-bottom: var(--space-xl);">
-                <div style="border-top: 1px solid var(--gray-light); padding-top: var(--space-md);">
-                    <h3 style="font-size: var(--fs-body); margin-bottom: var(--space-sm);"><a href="proof-of-control.html">Proof of Control: The Packet That Proves Your Bitcoin Trust Actually Works</a></h3>
-                    <p style="font-size: var(--fs-small); color: var(--gray-medium); margin-bottom: 0;">The 4-artifact system trustees and auditors need.</p>
-                </div>
-                <div style="border-top: 1px solid var(--gray-light); padding-top: var(--space-md);">
-                    <h3 style="font-size: var(--fs-body); margin-bottom: var(--space-sm);"><a href="why-multi-sig-fails.html">Why Multi-Sig Fails Without Governance</a></h3>
-                    <p style="font-size: var(--fs-small); color: var(--gray-medium); margin-bottom: 0;">The cryptography works. The institutional process doesn't.</p>
-                </div>
-                <div style="border-top: 1px solid var(--gray-light); padding-top: var(--space-md);">
-                    <h3 style="font-size: var(--fs-body); margin-bottom: var(--space-sm);"><a href="../cpas.html">For CPAs: Bitcoin Governance Support</a></h3>
-                    <p style="font-size: var(--fs-small); color: var(--gray-medium); margin-bottom: 0;">You don't need to become an expert. You need to know when to call one.</p>
+                <img src="../assets/images/continuity-orb.jpg" alt="Download">
+                <div class="download-text">
+                    <h3>Download the Full Memo</h3>
+                    <p>Save a copy to share with your team.</p>
+                    <a href="../assets/downloads/Bitcoin_Continuity_Field_Memo_Q1_2026.pdf" class="btn" download>Download PDF</a>
                 </div>
             </div>
 
-            <hr style="border: none; border-top: 1px solid var(--gray-light); margin: var(--space-xl) 0;">
+            <!-- Related -->
+            <div class="related-section">
+                <h2>Related</h2>
+                <div class="related-grid">
+                    <div class="related-item">
+                        <h3><a href="proof-of-control.html">Proof of Control</a></h3>
+                        <p>The 4-artifact system trustees and auditors need.</p>
+                    </div>
+                    <div class="related-item">
+                        <h3><a href="why-multi-sig-fails.html">Why Multi-Sig Fails Without Governance</a></h3>
+                        <p>The cryptography works. The institutional process doesn't.</p>
+                    </div>
+                    <div class="related-item">
+                        <h3><a href="../cpas.html">For CPAs: Bitcoin Governance Support</a></h3>
+                        <p>You don't need to become an expert. You need to know when to call one.</p>
+                    </div>
+                </div>
+            </div>
 
-            <p style="text-align: center; color: var(--gray-medium);">
-                <a href="../insights.html" style="border-bottom: 1px solid var(--gold);">&larr; Back to Insights</a>
+            <p style="text-align: center; margin-top: var(--space-xl); color: #888;">
+                <a href="../insights.html" style="color: #888; border-bottom: 1px solid var(--gold);">&larr; Back to Insights</a>
             </p>
 
         </div>
@@ -498,7 +1002,6 @@
     </footer>
 
     <script>
-        // Check if already unlocked
         function checkUnlocked() {
             return localStorage.getItem('memo_unlocked') === 'true';
         }
@@ -510,28 +1013,16 @@
             localStorage.setItem('memo_unlocked', 'true');
         }
 
-        // On page load, check if unlocked
         if (checkUnlocked()) {
             unlockContent();
         }
 
-        // Handle form submission
         document.getElementById('gateForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
             const email = document.getElementById('gateEmail').value;
-
-            // In production, send this to your email service (Mailchimp, ConvertKit, etc.)
-            // For now, we log it and unlock
             console.log('Memo download email:', email);
-
-            // Store email for reference
             localStorage.setItem('memo_email', email);
-
-            // Unlock content
             unlockContent();
-
-            // Scroll to where gated content starts
             document.getElementById('gatedContent').scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     </script>
