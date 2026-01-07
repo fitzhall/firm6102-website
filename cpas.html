@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For CPAs & Tax Advisors | Bitcoin Client Advisory | Firm6102</title>
+    <meta name="description" content="Your clients hold Bitcoin. You don't need to become a technical expert — you need a specialist partner. Technical governance support for CPAs advising cryptocurrency clients.">
+    <meta name="keywords" content="bitcoin cpa, cpa bitcoin clients, bitcoin tax advisor, cryptocurrency accountant, bitcoin estate planning cpa, digital asset tax planning, cpa cryptocurrency advisory">
+    <meta name="author" content="Fitzgerald Hall, Firm6102">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.firm6102.com/cpas.html">
+    <meta property="og:title" content="For CPAs & Tax Advisors | Bitcoin Client Advisory">
+    <meta property="og:description" content="You don't need to become a Bitcoin expert. You need to know when to call one.">
+    <meta property="og:image" content="https://www.firm6102.com/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.firm6102.com/cpas.html">
+    <meta property="twitter:title" content="For CPAs & Tax Advisors | Bitcoin Client Advisory">
+    <meta property="twitter:description" content="You don't need to become a Bitcoin expert. You need to know when to call one.">
+    <meta property="twitter:image" content="https://www.firm6102.com/assets/images/og-image.jpg">
+    <meta name="twitter:creator" content="@backedxbitcoin">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.firm6102.com/cpas.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Bitcoin Technical Advisory for CPAs",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Firm6102",
+        "url": "https://www.firm6102.com"
+      },
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "ProfessionalAudience",
+        "audienceType": "CPAs, Tax Advisors, Accountants, Wealth Advisors"
+      },
+      "description": "Technical governance support for CPAs advising clients who hold Bitcoin. Custody assessments, estate planning documentation, and specialist partnership."
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do CPAs need to understand Bitcoin technology to serve crypto clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. CPAs need to recognize when a client's Bitcoin situation requires technical expertise — and have a specialist partner to call. The same model as cost segregation engineering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Bitcoin custody assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A technical review of how a client holds their Bitcoin — evaluating security, succession planning, and documentation. The assessment identifies risks and recommends improvements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do CPAs work with Firm6102?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Referral partnership. The CPA identifies clients with Bitcoin holdings, refers them for technical assessment, and stays involved as the primary advisor. Firm6102 handles custody architecture and governance documentation."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/sovereign.css">
+
+    <style>
+        /* Hero */
+        .cpa-hero {
+            padding: var(--space-2xl) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .cpa-hero h1 {
+            font-size: var(--fs-h1);
+            margin-bottom: var(--space-md);
+        }
+
+        .cpa-hero .hero-subtitle {
+            font-size: var(--fs-h3);
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--gray-medium);
+            max-width: 45ch;
+            margin: 0 auto;
+        }
+
+        /* Challenge section */
+        .challenge-section {
+            background: var(--gray-light);
+            padding: var(--space-2xl) var(--padding);
+        }
+
+        .challenge-section .container {
+            max-width: var(--content-width);
+        }
+
+        .challenge-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .challenge-section p {
+            margin-bottom: var(--space-md);
+        }
+
+        .client-questions {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-lg) 0;
+        }
+
+        .client-questions li {
+            padding: var(--space-sm) 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: var(--fs-body);
+            font-style: italic;
+        }
+
+        .client-questions li::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        /* Cost seg model section */
+        .model-section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .model-section .container {
+            max-width: var(--content-width);
+        }
+
+        .model-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .model-section p {
+            margin-bottom: var(--space-md);
+        }
+
+        .model-highlight {
+            background: var(--black);
+            color: var(--white);
+            padding: var(--space-xl);
+            margin: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .model-highlight p {
+            font-family: var(--font-serif);
+            font-size: var(--fs-h3);
+            font-style: italic;
+            margin: 0;
+            max-width: 40ch;
+            margin: 0 auto;
+        }
+
+        .model-highlight p:last-child {
+            margin-top: var(--space-md);
+            font-style: normal;
+            font-family: var(--font-sans);
+            font-size: var(--fs-body);
+            color: var(--gold);
+        }
+
+        /* Services section */
+        .services-section {
+            background: var(--gray-light);
+            padding: var(--space-2xl) var(--padding);
+        }
+
+        .services-section .container {
+            max-width: var(--max-width);
+        }
+
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .cpa-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .cpa-service {
+            background: var(--white);
+            padding: var(--space-lg);
+            border-top: 3px solid var(--gold);
+        }
+
+        .cpa-service h3 {
+            font-size: var(--fs-body);
+            margin-bottom: var(--space-sm);
+        }
+
+        .cpa-service p {
+            font-size: var(--fs-small);
+            color: var(--gray-medium);
+            margin-bottom: 0;
+        }
+
+        /* How it works */
+        .process-section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .process-section .container {
+            max-width: var(--content-width);
+        }
+
+        .process-section h2 {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .process-steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+
+        .process-steps li {
+            padding: var(--space-md) 0;
+            padding-left: 3.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--gray-light);
+            counter-increment: step-counter;
+        }
+
+        .process-steps li:last-child {
+            border-bottom: none;
+        }
+
+        .process-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: var(--space-md);
+            width: 2rem;
+            height: 2rem;
+            background: var(--gold);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: var(--fs-small);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .process-steps li strong {
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+
+        .process-steps li span {
+            color: var(--gray-medium);
+            font-size: var(--fs-small);
+        }
+
+        .process-footer {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .process-footer p {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--gray-medium);
+            max-width: 45ch;
+            margin: 0 auto;
+        }
+
+        /* CTA Form */
+        .cpa-form-section {
+            background: var(--black);
+            color: var(--white);
+            padding: var(--space-2xl) var(--padding);
+        }
+
+        .cpa-form-section .container {
+            max-width: 500px;
+        }
+
+        .cpa-form-section h2 {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .cpa-form-section .section-intro {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .cpa-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+
+        .form-group label {
+            font-size: var(--fs-small);
+            font-weight: 500;
+            color: var(--white);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.875rem 1rem;
+            font-size: var(--fs-small);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            font-family: var(--font-sans);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group select option {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .cpa-form .btn {
+            background: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+        }
+
+        .cpa-form .btn:hover {
+            background: var(--white);
+            color: var(--black);
+            border-color: var(--white);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cpa-services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .model-highlight {
+                padding: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">Firm6102</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="services.html">Services</a>
+                <a href="attorneys.html">For Attorneys</a>
+                <a href="trustees.html">For Trustees</a>
+                <a href="cpas.html">For CPAs</a>
+                <a href="insights.html">Insights</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="cpa-hero">
+        <div class="container">
+            <h1>For CPAs & Tax Advisors</h1>
+            <p class="hero-subtitle">
+                You don't need to become a Bitcoin expert. You need to know when to call one.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="challenge-section">
+        <div class="container">
+            <h2>The Challenge</h2>
+            <p>
+                Your clients are acquiring Bitcoin. They're asking questions you didn't learn in your accounting program:
+            </p>
+
+            <ul class="client-questions">
+                <li>How should I hold this securely?</li>
+                <li>What happens to my Bitcoin when I die?</li>
+                <li>Is my current setup putting my family at risk?</li>
+                <li>Can you help me document this for estate planning?</li>
+            </ul>
+
+            <p>
+                You're a tax professional, not a custody engineer. But these clients expect guidance — and "I don't handle crypto" is losing relevance as more wealth moves into Bitcoin.
+            </p>
+
+            <p>
+                The question isn't whether you'll encounter Bitcoin clients. It's whether you'll be equipped to serve them.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Cost Seg Model -->
+    <section class="model-section">
+        <div class="container">
+            <h2>The Cost Segregation Model</h2>
+            <p>
+                You don't perform cost segregation studies yourself. But when a client acquires commercial real estate, you know to bring in the engineer. You stay in the loop, coordinate the engagement, and deliver value to your client.
+            </p>
+
+            <p>
+                Bitcoin governance works the same way.
+            </p>
+
+            <p>
+                You don't need to understand multisig architecture, hardware wallet security, or key rotation protocols. You need to recognize when a client's Bitcoin situation requires a specialist — and have one to call.
+            </p>
+
+            <div class="model-highlight">
+                <p>We're your technical partner for Bitcoin clients.</p>
+                <p>You keep the relationship. We handle the technical scope.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section">
+        <div class="container">
+            <h2>What We Provide CPAs</h2>
+
+            <div class="cpa-services-grid">
+                <div class="cpa-service">
+                    <h3>Client Custody Assessments</h3>
+                    <p>
+                        We evaluate your client's Bitcoin setup — security, backup procedures, succession planning — and deliver a report you can review together.
+                    </p>
+                </div>
+                <div class="cpa-service">
+                    <h3>Estate & Gift Planning Support</h3>
+                    <p>
+                        Proof of Control documentation for estate filings, trust funding, and generational transfers. The technical records your clients need.
+                    </p>
+                </div>
+                <div class="cpa-service">
+                    <h3>Technical Consultation</h3>
+                    <p>
+                        When a client situation gets technical — custody questions, governance concerns, inheritance structures — you have an expert on call.
+                    </p>
+                </div>
+                <div class="cpa-service">
+                    <h3>CPA-Friendly Briefings</h3>
+                    <p>
+                        Quick primers on Bitcoin custody so you can speak competently with clients without becoming a technician yourself.
+                    </p>
+                </div>
+                <div class="cpa-service">
+                    <h3>Clean Referral Model</h3>
+                    <p>
+                        You identify clients with Bitcoin holdings and refer them to us for technical assessment. You stay the primary advisor. We handle what you shouldn't have to.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process-section">
+        <div class="container">
+            <h2>How It Works</h2>
+
+            <ol class="process-steps">
+                <li>
+                    <strong>Client raises a Bitcoin question</strong>
+                    <span>They mention holdings, ask about estate planning, or express concerns about security.</span>
+                </li>
+                <li>
+                    <strong>You refer them to us</strong>
+                    <span>A warm introduction for a technical custody assessment.</span>
+                </li>
+                <li>
+                    <strong>We conduct the assessment</strong>
+                    <span>Review their setup, identify risks, document the governance structure.</span>
+                </li>
+                <li>
+                    <strong>You review findings with your client</strong>
+                    <span>We deliver a report. You discuss implications and next steps.</span>
+                </li>
+                <li>
+                    <strong>Ongoing support as needed</strong>
+                    <span>Implementation, annual reviews, estate execution — we're available when technical questions arise.</span>
+                </li>
+            </ol>
+
+            <div class="process-footer">
+                <p>You stay the trusted advisor. We handle the technical complexity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Form -->
+    <section class="cpa-form-section">
+        <div class="container">
+            <h2>Schedule a Partnership Call</h2>
+            <p class="section-intro">
+                Tell us about your practice. We'll discuss how to serve your Bitcoin clients together.
+            </p>
+
+            <form class="cpa-form" id="cpaForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="firm">Firm Name</label>
+                    <input type="text" id="firm" name="firm">
+                </div>
+
+                <div class="form-group">
+                    <label for="clients">How many clients hold Bitcoin?</label>
+                    <select id="clients" name="clients">
+                        <option value="">Select...</option>
+                        <option value="1-5">1-5 clients</option>
+                        <option value="5-20">5-20 clients</option>
+                        <option value="20+">20+ clients</option>
+                        <option value="not-sure">Not sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">What questions are your clients asking?</label>
+                    <textarea id="message" name="message" placeholder="Tell us about the Bitcoin-related situations you're encountering..."></textarea>
+                </div>
+
+                <button type="submit" class="btn">Request Partnership Call</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Related Resources -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Resources for CPAs</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <h3><a href="insights/proof-of-control.html">Proof of Control</a></h3>
+                    <p>
+                        The documentation your clients need — a 4-artifact system that proves Bitcoin governance to trustees, auditors, and courts.
+                    </p>
+                </article>
+                <article class="service-card">
+                    <h3><a href="insights/trust-hash-amendment-protocol.html">Trust Hash Amendment Protocol</a></h3>
+                    <p>
+                        How governance documents stay current without rewriting the trust. One hash, one source of truth.
+                    </p>
+                </article>
+                <article class="service-card">
+                    <h3><a href="insights/fiduciary-technical-checklist-bitcoin-estate-assets.html">A Fiduciary's Technical Checklist</a></h3>
+                    <p>
+                        The four-phase checklist for managing Bitcoin in estates — useful context for advising clients.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    &copy; Firm6102 — Technical Fiduciary Services
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/fitzgeraldhall/">LinkedIn</a>
+                    <a href="https://x.com/backedxbitcoin">X</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('cpaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('CPA form submitted');
+            alert('Thank you for your inquiry. We will be in touch within 24 hours.');
+            this.reset();
+        });
+    </script>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
