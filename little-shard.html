@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Custody Operating Manual | Firm6102</title>
+    <meta name="description" content="Make your Bitcoin setup survive anything — even you. Download the Self-Custody Operating Manual serious holders are already using.">
+    <meta name="keywords" content="bitcoin self custody, bitcoin operating manual, bitcoin security, bitcoin inheritance, little shard, bitcoin backup">
+    <meta name="author" content="Fitzgerald Hall, Firm6102">
+    <meta name="robots" content="noindex">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.firm6102.com/little-shard.html">
+    <meta property="og:title" content="Self-Custody Operating Manual">
+    <meta property="og:description" content="Make your Bitcoin setup survive anything — even you.">
+    <meta property="og:image" content="https://www.firm6102.com/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.firm6102.com/little-shard.html">
+    <meta property="twitter:title" content="Self-Custody Operating Manual">
+    <meta property="twitter:description" content="Make your Bitcoin setup survive anything — even you.">
+    <meta property="twitter:image" content="https://www.firm6102.com/assets/images/og-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.firm6102.com/little-shard.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gold: #c9a227;
+            --gray-light: #f5f5f5;
+            --gray-medium: #666666;
+            --font-serif: 'IBM Plex Serif', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 540px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .subhead {
+            font-size: 1.125rem;
+            color: #aaa;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .form-container {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .form-group input[type="email"] {
+            flex: 1;
+            min-width: 200px;
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            border: none;
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .form-group input[type="email"]:focus {
+            outline: 2px solid var(--gold);
+            outline-offset: -2px;
+        }
+
+        .form-group button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .form-group button:hover {
+            background: #d4a84a;
+        }
+
+        .form-group button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .privacy {
+            font-family: var(--font-sans);
+            font-size: 0.8125rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        /* Success State */
+        .success-container {
+            display: none;
+        }
+
+        .success-container.show {
+            display: block;
+        }
+
+        .form-container.hide {
+            display: none;
+        }
+
+        .success-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .success-container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-container p {
+            color: #aaa;
+            margin-bottom: 2rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            background: var(--gold);
+            color: var(--black);
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: var(--white);
+        }
+
+        .error-message {
+            background: #4a1c1c;
+            color: #ff6b6b;
+            padding: 0.75rem 1rem;
+            margin-top: 1rem;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .footer-link {
+            margin-top: 3rem;
+            font-family: var(--font-sans);
+            font-size: 0.8125rem;
+        }
+
+        .footer-link a {
+            color: #666;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        }
+
+        .footer-link a:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .form-group {
+                flex-direction: column;
+            }
+
+            .form-group input[type="email"] {
+                min-width: 100%;
+            }
+
+            .form-group button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">FIRM6102</div>
+
+        <h1>Make your Bitcoin setup survive anything — even you.</h1>
+
+        <p class="subhead">
+            Download the Self-Custody Operating Manual serious holders are already using.
+        </p>
+
+        <!-- Form -->
+        <div class="form-container" id="formContainer">
+            <form id="leadForm">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                    <button type="submit" id="submitBtn">Get the Manual</button>
+                </div>
+            </form>
+            <div class="error-message" id="errorMessage"></div>
+            <p class="privacy">No spam. Unsubscribe anytime.</p>
+        </div>
+
+        <!-- Success -->
+        <div class="success-container" id="successContainer">
+            <div class="success-icon">&#10003;</div>
+            <h2>You're in.</h2>
+            <p>Click below to download your copy of the Self-Custody Operating Manual.</p>
+            <a href="assets/downloads/Little_Shard_Gift.pdf" class="download-btn" download>Download PDF</a>
+        </div>
+
+        <div class="footer-link">
+            <a href="/">Back to Firm6102</a>
+        </div>
+    </div>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Initialize Supabase
+        const supabaseUrl = 'https://jicdgyirlvwewqsacyyo.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImppY2RneWlybHZ3ZXdxc2FjeXlvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI1MjQ5ODgsImV4cCI6MjA2ODEwMDk4OH0.kgHN1aNYYMJDg7VXs3lXmyPlnwhx1p9asmZ8wPgZZV0';
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        // Get UTM parameters
+        function getUTMParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                source: params.get('utm_source') || null,
+                medium: params.get('utm_medium') || null,
+                campaign: params.get('utm_campaign') || null
+            };
+        }
+
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const submitBtn = document.getElementById('submitBtn');
+            const errorMessage = document.getElementById('errorMessage');
+            const utm = getUTMParams();
+
+            // Disable button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            errorMessage.classList.remove('show');
+
+            try {
+                const { data, error } = await supabase
+                    .from('leads')
+                    .insert([
+                        {
+                            email: email,
+                            source: utm.source,
+                            medium: utm.medium,
+                            campaign: utm.campaign
+                        }
+                    ]);
+
+                if (error) {
+                    // Check if duplicate
+                    if (error.code === '23505') {
+                        // Already subscribed, still show success
+                        showSuccess();
+                    } else {
+                        throw error;
+                    }
+                } else {
+                    showSuccess();
+                }
+            } catch (err) {
+                console.error('Error:', err);
+                errorMessage.textContent = 'Something went wrong. Please try again.';
+                errorMessage.classList.add('show');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Get the Manual';
+            }
+        });
+
+        function showSuccess() {
+            document.getElementById('formContainer').classList.add('hide');
+            document.getElementById('successContainer').classList.add('show');
+        }
+    </script>
+
+</body>
+</html>
