@@ -295,7 +295,7 @@
         // Initialize Supabase
         const supabaseUrl = 'https://jicdgyirlvwewqsacyyo.supabase.co';
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImppY2RneWlybHZ3ZXdxc2FjeXlvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI1MjQ5ODgsImV4cCI6MjA2ODEwMDk4OH0.kgHN1aNYYMJDg7VXs3lXmyPlnwhx1p9asmZ8wPgZZV0';
-        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+        const db = window.supabase.createClient(supabaseUrl, supabaseKey);
 
         // Get UTM parameters
         function getUTMParams() {
@@ -322,7 +322,7 @@
             errorMessage.classList.remove('show');
 
             try {
-                const { data, error } = await supabase
+                const { data, error } = await db
                     .from('leads')
                     .insert([
                         {
