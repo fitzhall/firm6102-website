@@ -203,6 +203,24 @@
             background: var(--white);
         }
 
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .download-btn-secondary {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .download-btn-secondary:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
         .error-message {
             background: #4a1c1c;
             color: #ff6b6b;
@@ -280,8 +298,11 @@
         <div class="success-container" id="successContainer">
             <div class="success-icon">&#10003;</div>
             <h2>You're in.</h2>
-            <p>Click below to download your copy of the Self-Custody Operating Manual.</p>
-            <a href="assets/downloads/Little_Shard_Gift.pdf" class="download-btn" download>Download PDF</a>
+            <p>Download both files below — the template and the step-by-step guide.</p>
+            <div class="download-buttons">
+                <a href="assets/downloads/Little_Shard_Gift.pdf" class="download-btn" download>Little Shard Template</a>
+                <a href="assets/downloads/Little_Shard_Companion_Guide.pdf" class="download-btn download-btn-secondary" download>How-To Guide</a>
+            </div>
         </div>
 
         <div class="footer-link">
