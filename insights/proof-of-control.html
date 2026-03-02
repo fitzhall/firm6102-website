@@ -54,6 +54,39 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Proof of Control for Bitcoin held in a trust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Proof of Control is a system of record made up of four artifacts that together prove a trust can actually administer its Bitcoin: a Control Memo (explains governance in plain language), Exhibit A (the wallet's technical specification), a THAP Log (preserves every governance change with cryptographic proof), and Drill Records (evidence that the spending conditions can actually be satisfied)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why isn't a trust document enough to control Bitcoin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A trust document grants legal authority, but Bitcoin doesn't care about legal authority — it requires cryptographic control. If a wallet requires 3-of-5 signatures and the trustee only controls one key, they cannot administer the asset regardless of what the legal documents say. Proof of Control bridges this gap between legal authority and operational capability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a Bitcoin trustee hold versus never hold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A trustee should hold the Control Memo and Exhibit A, access to the THAP log and amendment history, drill records, and contact information for keyholders. A trustee should never hold seed phrases or private keys, hardware wallets or signing devices, or unilateral spending capability. This separation protects both the trustee and the Bitcoin."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

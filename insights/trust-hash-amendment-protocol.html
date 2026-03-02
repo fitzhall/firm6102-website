@@ -54,6 +54,47 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a new trust every time my Bitcoin custody setup changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. With the Trust Hash Amendment Protocol (THAP), you record a new cryptographic hash via a short amendment. The trust structure stays intact while the operational instructions are updated and re-linked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can someone change the Bitcoin instruction file without going through the trust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They can draft whatever they want, but it is not legally binding until the new hash is recorded by the Trustee. The trust controls which version of the file is authoritative."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if two versions of the Bitcoin governance file exist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The trust's last recorded hash controls. Prior versions are archived and superseded. There is always one authoritative answer, providing a clear chain of custody for your governance documents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should we review our Bitcoin trust governance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Annually, at minimum. You should also review after major life events such as births, deaths, divorces, significant Bitcoin accumulation, or changes to your custody setup."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

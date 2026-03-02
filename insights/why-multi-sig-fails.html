@@ -54,6 +54,39 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does multi-signature Bitcoin security fail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multi-sig fails not because of the cryptography, but because of missing governance. The math is sound, but it doesn't answer critical questions: Who holds each key? What happens when a keyholder dies or resigns? Who has authority to initiate a transaction? Without institutional process, multi-sig becomes a coordination problem disguised as a security solution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are common examples of multi-sig failure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common failures include: all three keys controlled by the same person (defeating the purpose entirely), a keyholder leaving the company and taking their hardware wallet (forcing an emergency sweep), and a CFO dying unexpectedly with nobody knowing which safe deposit box held the backup seed phrase. These are predictable results of deploying cryptographic tools without operational governance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does proper Bitcoin multi-sig governance look like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Proper governance includes key custodian agreements defining roles, responsibilities, and succession procedures; documented procedures for key generation, backup, rotation, and recovery; regular audits verifying keys are accessible and controlled by designated parties; and legal architecture that gives the system legitimacy in the eyes of courts, auditors, and successors."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
